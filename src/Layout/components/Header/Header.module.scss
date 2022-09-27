@@ -1,0 +1,39 @@
+.wrapper {
+    flex: 1;
+    position: fixed;
+    top: 0;
+    left: var(--width-left-sidebar);
+    right: var(--width-right-sidebar);
+    height: var(--header-height);
+    padding: 0 60px;
+    background-color: var(--primary-color);
+    border-bottom: 1px solid #172c48;
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+.menu {
+    position: absolute;
+    display: none;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all 0.5s;
+}
+
+.menu.display {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s;
+}
+
+.menu-btn {
+    display: none;
+    padding: 8px 12px;
+    margin-right: 12px;
+    font-size: 3rem;
+    color: var(--text-primary);
+    cursor: pointer;
+    &:hover {
+        opacity: 0.7;
+    }
+}
